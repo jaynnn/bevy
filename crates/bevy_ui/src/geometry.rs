@@ -256,13 +256,13 @@ impl Val {
     reflect(Serialize, Deserialize)
 )]
 pub struct UiRect {
-    /// The value corresponding to the left side of the UI rect.
+    /// 对应于 UI 矩形左侧的值。
     pub left: Val,
-    /// The value corresponding to the right side of the UI rect.
+    /// 对应于 UI 矩形右侧的值。
     pub right: Val,
-    /// The value corresponding to the top side of the UI rect.
+    /// 对应于 UI 矩形顶侧的值。
     pub top: Val,
-    /// The value corresponding to the bottom side of the UI rect.
+    /// 对应于 UI 矩形底侧的值。
     pub bottom: Val,
 }
 
@@ -281,9 +281,9 @@ impl UiRect {
         bottom: Val::ZERO,
     };
 
-    /// Creates a new [`UiRect`] from the values specified.
+    /// 根据指定的值创建一个新的 [`UiRect`]。
     ///
-    /// # Example
+    /// # 例子
     ///
     /// ```
     /// # use bevy_ui::{UiRect, Val};
@@ -309,9 +309,9 @@ impl UiRect {
         }
     }
 
-    /// Creates a new [`UiRect`] where all sides have the same value.
+    /// 创建一个新的 [`UiRect`]，其中所有边都具有相同的值。
     ///
-    /// # Example
+    /// # 例子
     ///
     /// ```
     /// # use bevy_ui::{UiRect, Val};
@@ -332,11 +332,11 @@ impl UiRect {
         }
     }
 
-    /// Creates a new [`UiRect`] from the values specified in logical pixels.
+    /// 根据逻辑像素中指定的值创建一个新的 [`UiRect`]。
     ///
-    /// This is a shortcut for [`UiRect::new()`], applying [`Val::Px`] to all arguments.
+    /// 这是 [`UiRect::new()`] 的快捷方式，将 [`Val::Px`] 应用于所有参数
     ///
-    /// # Example
+    /// # 例子
     ///
     /// ```
     /// # use bevy_ui::{UiRect, Val};
@@ -356,11 +356,11 @@ impl UiRect {
         }
     }
 
-    /// Creates a new [`UiRect`] from the values specified in percentages.
+    ///根据以百分比指定的值创建一个新的 [`UiRect`]。
     ///
-    /// This is a shortcut for [`UiRect::new()`], applying [`Val::Percent`] to all arguments.
+    ///这是 [`UiRect::new()`] 的快捷方式，将 [`Val::Percent`] 应用于所有参数。
     ///
-    /// # Example
+    /// # 例子
     ///
     /// ```
     /// # use bevy_ui::{UiRect, Val};
@@ -380,10 +380,10 @@ impl UiRect {
         }
     }
 
-    /// Creates a new [`UiRect`] where `left` and `right` take the given value,
-    /// and `top` and `bottom` set to zero `Val::ZERO`.
+    /// 创建一个新的 [`UiRect`]，其中 `left` 和 `right` 取给定值，
+    /// 并将“top”和“bottom”设置为零“Val::ZERO”。
     ///
-    /// # Example
+    /// # 例子
     ///
     /// ```
     /// # use bevy_ui::{UiRect, Val};

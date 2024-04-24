@@ -55,7 +55,6 @@ Bevy还在开发的早期阶段。许多重要特性还缺失着，文档也很�
 [PR](https://github.com/bevyengine/bevy/pulls) 您自己解决!
 
 对于更加复杂的架构决策和实验性质的疯狂科学想法，请开个[RFC](https://github.com/bevyengine/rfcs)（讨论请求），然后我们可以一起进行高效的头脑风暴。
-For more complex architecture decisions and experimental mad science, please open an [RFC](https://github.com/bevyengine/rfcs) (Request For Comments) so we can brainstorm together effectively!
 
 ## 开始
 
