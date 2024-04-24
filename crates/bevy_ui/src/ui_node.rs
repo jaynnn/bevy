@@ -252,7 +252,7 @@ pub struct Style {
     pub align_items: AlignItems,
 
     ///用于控制每个单独的项在给定空间内的默认对齐方式。
-    ///-对于 Flexbox 容器，此属性无效。有关 Flex 项目的主轴对齐方式，请参阅“justify_content”。
+    ///-对于 Flexbox 容器，此属性无效。有关 Flex 项的主轴对齐方式，请参阅“justify_content”。
     ///-对于 CSS 网格容器，设置其网格区域内子项的默认内联（水平）轴对齐方式。
     ///
     ///如果在子节点上设置了 [`JustifySelf`]，则该值将被覆盖。
@@ -261,7 +261,7 @@ pub struct Style {
     pub justify_items: JustifyItems,
 
     ///用于控制指定项在给定空间内的对齐方式。
-    ///-对于 Flexbox 项目，控制项目的横轴对齐方式。
+    ///-对于 Flexbox 项，控制项的横轴对齐方式。
     ///-对于 CSS 网格项，控制网格项在其网格区域内的块（垂直）轴对齐。
     ///
     ///如果设置为“Auto”，则从父节点上设置的 [`AlignItems`] 值继承对齐方式。
@@ -270,7 +270,7 @@ pub struct Style {
     pub align_self: AlignSelf,
 
     ///用于控制指定项在给定空间内的对齐方式。
-    ///-对于 Flexbox 项目，此属性无效。有关 Flex 项目的主轴对齐方式，请参阅“justify_content”。
+    ///-对于 Flexbox 项，此属性无效。有关 Flex 项的主轴对齐方式，请参阅“justify_content”。
     ///-对于 CSS 网格项，控制网格项在其网格区域内的内联（水平）轴对齐。
     ///
     ///如果设置为“Auto”，则从父节点上设置的 [`JustifyItems`] 值继承对齐方式。
@@ -279,14 +279,14 @@ pub struct Style {
     pub justify_self: JustifySelf,
 
     ///用于控制项的分配方式。
-    ///-对于 Flexbox 容器，如果“flex_wrap”设置为 [“FlexWrap::Wrap”] 并且有多行项目，则控制行的对齐。
+    ///-对于 Flexbox 容器，如果“flex_wrap”设置为 [“FlexWrap::Wrap”] 并且有多行项，则控制行的对齐。
     ///-对于 CSS 网格容器，控制网格行的对齐方式。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-content>
     pub align_content: AlignContent,
 
     ///用于控制项的分配方式。
-    ///-对于 Flexbox 容器，控制主轴中项目的对齐方式。
+    ///-对于 Flexbox 容器，控制主轴中项的对齐方式。
     ///-对于 CSS 网格容器，控制网格列的对齐方式。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content>
@@ -314,11 +314,10 @@ pub struct Style {
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin>
     pub margin: UiRect,
 
-    /// The amount of space between the edges of a node and its contents.
+    ///节点边缘与其内容之间的空间量。
     ///
-    /// If a percentage value is used, the percentage is calculated based on the width of the parent node.
-    ///
-    /// # Example
+    ///如果使用百分比值，则根据父节点的宽度计算百分比。
+    /// # 例子
     /// ```
     /// # use bevy_ui::{Style, UiRect, Val};
     /// let style = Style {
@@ -331,96 +330,97 @@ pub struct Style {
     ///     ..Default::default()
     /// };
     /// ```
-    /// A node with this style and a parent with dimensions of 300px by 100px will have calculated padding of 3px on the left, 6px on the right, 9px on the top and 12px on the bottom.
+    /// 具有此样式的节点和尺寸为 300px x 100px 的父节点将计算出左侧 3px、右侧 6px、顶部 9px 和底部 12px 的填充。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding>
     pub padding: UiRect,
 
-    /// The amount of space between the margins of a node and its padding.
+    ///节点的边距与其填充之间的空间量。
     ///
-    /// If a percentage value is used, the percentage is calculated based on the width of the parent node.
+    ///如果使用百分比值，则根据父节点的宽度计算百分比。
     ///
-    /// The size of the node will be expanded if there are constraints that prevent the layout algorithm from placing the border within the existing node boundary.
+    ///如果存在阻止布局算法将边框放置在现有节点边界内的约束，则节点的大小将会扩展。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width>
     pub border: UiRect,
 
-    /// Whether a Flexbox container should be a row or a column. This property has no effect on Grid nodes.
+    /// Flexbox 容器应该是行还是列。该属性对网格节点没有影响。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-direction>
     pub flex_direction: FlexDirection,
 
-    /// Whether a Flexbox container should wrap its contents onto multiple lines if they overflow. This property has no effect on Grid nodes.
+    /// 如果 Flexbox 容器溢出，是否应将其内容包装到多行中。该属性对网格节点没有影响。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-wrap>
     pub flex_wrap: FlexWrap,
 
-    /// Defines how much a flexbox item should grow if there's space available. Defaults to 0 (don't grow at all).
+    /// 定义如果有可用空间，Flexbox 项应该增长多少。默认为 0（根本不增长）
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow>
     pub flex_grow: f32,
 
-    /// Defines how much a flexbox item should shrink if there's not enough space available. Defaults to 1.
+    /// 定义如果没有足够的可用空间，Flexbox 项应缩小多少。默认为 1。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink>
     pub flex_shrink: f32,
 
-    /// The initial length of a flexbox in the main axis, before flex growing/shrinking properties are applied.
+    /// 在应用 Flex 增长/收缩属性之前，Flexbox 在主轴上的初始长度。
     ///
-    /// `flex_basis` overrides `size` on the main axis if both are set, but it obeys the bounds defined by `min_size` and `max_size`.
+    /// 如果两者都设置了，“flex_basis”将覆盖主轴上的“size”，但它遵循“min_size”和“max_size”定义的界限。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis>
     pub flex_basis: Val,
 
-    /// The size of the gutters between items in a vertical flexbox layout or between rows in a grid layout.
+    /// 垂直 Flexbox 布局中的项之间或网格布局中的行之间的装订线的大小。
     ///
-    /// Note: Values of `Val::Auto` are not valid and are treated as zero.
+    /// 注意：“Val::Auto”的值无效并被视为零。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/row-gap>
     pub row_gap: Val,
 
-    /// The size of the gutters between items in a horizontal flexbox layout or between column in a grid layout.
+    /// 水平 Flexbox 布局中的项之间或网格布局中的列之间的装订线的大小。
     ///
-    /// Note: Values of `Val::Auto` are not valid and are treated as zero.
+    /// 注意：“Val::Auto”的值无效并被视为零。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/column-gap>
     pub column_gap: Val,
 
-    /// Controls whether automatically placed grid items are placed row-wise or column-wise as well as whether the sparse or dense packing algorithm is used.
-    /// Only affects Grid layouts.
+    /// 控制自动放置的网格项是按行还是按列放置，以及是否使用稀疏或密集填充算法。
+    /// 仅影响网格布局。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-flow>
     pub grid_auto_flow: GridAutoFlow,
 
-    /// Defines the number of rows a grid has and the sizes of those rows. If grid items are given explicit placements then more rows may
-    /// be implicitly generated by items that are placed out of bounds. The sizes of those rows are controlled by `grid_auto_rows` property.
+    /// 定义网格的行数以及这些行的大小。如果网格项被指定明确的位置，则可能会出现更多行
+    /// 由放置在界限之外的项隐式生成。这些行的大小由“grid_auto_rows”属性控制。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-rows>
     pub grid_template_rows: Vec<RepeatedGridTrack>,
 
-    /// Defines the number of columns a grid has and the sizes of those columns. If grid items are given explicit placements then more columns may
-    /// be implicitly generated by items that are placed out of bounds. The sizes of those columns are controlled by `grid_auto_columns` property.
+    /// 定义网格的列数以及这些列的大小。如果给网格项明确的位置，那么可能会出现更多的列
+    /// 由放置在界限之外的项隐式生成。这些列的大小由“grid_auto_columns”属性控制。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-columns>
     pub grid_template_columns: Vec<RepeatedGridTrack>,
 
-    /// Defines the size of implicitly created rows. Rows are created implicitly when grid items are given explicit placements that are out of bounds
-    /// of the rows explicitly created using `grid_template_rows`.
+    /// 定义隐式创建的行的大小。当网格项被指定超出范围的显式放置时，会隐式创建行
+    /// 使用“grid_template_rows”显式创建的行的数量。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-rows>
     pub grid_auto_rows: Vec<GridTrack>,
-    /// Defines the size of implicitly created columns. Columns are created implicitly when grid items are given explicit placements that are out of bounds
-    /// of the columns explicitly created using `grid_template_columns`.
+
+    /// 定义隐式创建的列的大小。当网格项被指定超出界限的显式放置时，会隐式创建列
+    /// 使用“grid_template_columns”显式创建的列的数量。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-columns>
     pub grid_auto_columns: Vec<GridTrack>,
 
-    /// The row in which a grid item starts and how many rows it spans.
+    /// 网格项开始的行及其跨越的行数。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-row>
     pub grid_row: GridPlacement,
 
-    /// The column in which a grid item starts and how many columns it spans.
+    /// 网格项开始所在的列以及它跨越的列数。
     ///
     /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-column>
     pub grid_column: GridPlacement,
@@ -695,27 +695,27 @@ impl Default for AlignContent {
     reflect(Serialize, Deserialize)
 )]
 pub enum JustifyContent {
-    /// The items are packed in their default position as if no alignment was applied.
+    /// 这些项按其默认位置打包，就好像未应用对齐一样。
     Default,
-    /// The items are packed towards the start of the axis.
+    /// 这些物品朝着轴的起点排列。
     Start,
-    /// The items are packed towards the end of the axis.
+    /// 这些物品被包装在轴的末端。
     End,
-    /// The items are packed towards the start of the axis, unless the flex direction is reversed;
-    /// then the items are packed towards the end of the axis.
+    /// 除非弯曲方向相反，否则项会朝着轴的起点打包；
+    /// 然后物品被包装到轴的末端。
     FlexStart,
-    /// The items are packed towards the end of the axis, unless the flex direction is reversed;
-    /// then the items are packed towards the start of the axis.
+    /// 除非弯曲方向相反，否则物品会朝轴的末端包装；
+    /// 然后物品会朝着轴的起点打包。
     FlexEnd,
-    /// The items are packed along the center of the axis.
+    /// 物品沿轴中心排列。
     Center,
-    /// The items are stretched to fill the container along the axis.
+    /// 项被拉伸以沿轴填充容器。
     Stretch,
-    /// The items are distributed such that the gap between any two items is equal.
+    /// 项的分布使得任意两个项之间的差距相等。
     SpaceBetween,
-    /// The items are distributed such that the gap between and around any two items is equal.
+    /// 项的分布使得任意两个项之间和周围的间隙相等。
     SpaceEvenly,
-    /// The items are distributed such that the gap between and around any two items is equal, with half-size gaps on either end.
+    /// 这些项的分布使得任何两个项之间和周围的间隙相等，两端都有一半大小的间隙。
     SpaceAround,
 }
 
