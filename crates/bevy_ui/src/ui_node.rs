@@ -135,13 +135,13 @@ impl Default for Node {
 ///
 /// ### Flexbox
 ///
-/// - [MDN: Basic Concepts of Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+/// - [MDN: Basic Concepts of Flexbox](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 /// - [A Complete Guide To Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) by CSS Tricks. This is detailed guide with illustrations and comprehensive written explanation of the different Flexbox properties and how they work.
 /// - [Flexbox Froggy](https://flexboxfroggy.com/). An interactive tutorial/game that teaches the essential parts of Flexbox in a fun engaging way.
 ///
 /// ### CSS Grid
 ///
-/// - [MDN: Basic Concepts of Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+/// - [MDN: Basic Concepts of Grid Layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 /// - [A Complete Guide To CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) by CSS Tricks. This is detailed guide with illustrations and comprehensive written explanation of the different CSS Grid properties and how they work.
 /// - [CSS Grid Garden](https://cssgridgarden.com/). An interactive tutorial/game that teaches the essential parts of CSS Grid in a fun engaging way.
 
@@ -153,151 +153,150 @@ impl Default for Node {
     reflect(Serialize, Deserialize)
 )]
 pub struct Style {
-    /// Which layout algorithm to use when laying out this node's contents:
-    ///   - [`Display::Flex`]: Use the Flexbox layout algorithm
-    ///   - [`Display::Grid`]: Use the CSS Grid layout algorithm
-    ///   - [`Display::None`]: Hide this node and perform layout as if it does not exist.
+    /// 布局该节点的内容时使用哪种布局算法:
+    ///   - [`Display::Flex`]: 使用Flex box布局算法
+    ///   - [`Display::Grid`]: 使用CSS Grid布局算法
+    ///   - [`Display::None`]: 隐藏节点, 布局表现为节点不存在
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/display>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/display>
     pub display: Display,
 
-    /// Whether a node should be laid out in-flow with, or independently of its siblings:
-    ///  - [`PositionType::Relative`]: Layout this node in-flow with other nodes using the usual (flexbox/grid) layout algorithm.
-    ///  - [`PositionType::Absolute`]: Layout this node on top and independently of other nodes.
+    /// 节点是否应该与其兄弟节点一起布置，或者独立于其兄弟节点:
+    ///  - [`PositionType::Relative`]: 使用通常的（flexbox/grid） 布局算法将此节点与其他节点进行流式布局。
+    ///  - [`PositionType::Absolute`]: 将此节点布局在顶部, 并独立于其他节点。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/position>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/position>
     pub position_type: PositionType,
 
-    /// Whether overflowing content should be displayed or clipped.
+    /// 是否应显示或剪切溢出的内容。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/overflow>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow>
     pub overflow: Overflow,
 
-    /// Defines the text direction. For example, English is written LTR (left-to-right) while Arabic is written RTL (right-to-left).
-    ///
-    /// Note: the corresponding CSS property also affects box layout order, but this isn't yet implemented in Bevy.
-    ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/direction>
+    /// 定义文本方向。 例如，英语写作 LTR（从左到右），而阿拉伯语写作 RTL（从右到左）。
+    /// 注意：相应的 CSS 属性也会影响框布局顺序，但这尚未在 Bevy 中实现。.
+    /// 
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/direction>
     pub direction: Direction,
 
-    /// The horizontal position of the left edge of the node.
-    ///  - For relatively positioned nodes, this is relative to the node's position as computed during regular layout.
-    ///  - For absolutely positioned nodes, this is relative to the *parent* node's bounding box.
-    ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/left>
+    /// 节点左边缘的水平位置。
+    /// - 对于相对定位的节点，这是相对于常规布局期间计算的节点位置的。
+    /// - 对于绝对定位的节点，这是相对于“父”节点的边界框。
+    /// 
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/left>
     pub left: Val,
 
-    /// The horizontal position of the right edge of the node.
-    ///  - For relatively positioned nodes, this is relative to the node's position as computed during regular layout.
-    ///  - For absolutely positioned nodes, this is relative to the *parent* node's bounding box.
-    ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/right>
+    /// 节点右边缘的水平位置。
+    /// - 对于相对定位的节点，这是相对于常规布局期间计算的节点位置的。
+    /// - 对于绝对定位的节点，这是相对于“父”节点的边界框。
+    /// 
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/right>
     pub right: Val,
 
-    /// The vertical position of the top edge of the node.
-    ///  - For relatively positioned nodes, this is relative to the node's position as computed during regular layout.
-    ///  - For absolutely positioned nodes, this is relative to the *parent* node's bounding box.
-    ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/top>
+    /// 节点顶部边缘的垂直位置。
+    /// - 对于相对定位的节点，这是相对于常规布局期间计算的节点位置的。
+    /// - 对于绝对定位的节点，这是相对于“父”节点的边界框。
+    /// 
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/top>
     pub top: Val,
 
-    /// The vertical position of the bottom edge of the node.
-    ///  - For relatively positioned nodes, this is relative to the node's position as computed during regular layout.
-    ///  - For absolutely positioned nodes, this is relative to the *parent* node's bounding box.
-    ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/bottom>
+    /// 节点底部边缘的垂直位置。
+    /// - 对于相对定位的节点，这是相对于常规布局期间计算的节点位置的。
+    /// - 对于绝对定位的节点，这是相对于“父”节点的边界框。
+    /// 
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/bottom>
     pub bottom: Val,
 
-    /// The ideal width of the node. `width` is used when it is within the bounds defined by `min_width` and `max_width`.
+    /// 节点的理想宽度。当“width”在“min_width”和“max_width”定义的范围内时使用。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/width>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/width>
     pub width: Val,
 
-    /// The ideal height of the node. `height` is used when it is within the bounds defined by `min_height` and `max_height`.
+    /// 节点的理想高度。当“height”在“min_width”和“max_width”定义的范围内时使用。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/height>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/height>
     pub height: Val,
 
-    /// The minimum width of the node. `min_width` is used if it is greater than `width` and/or `max_width`.
+    /// 节点的最小宽度。如果“min_width”大于“width”和/或“max_width”，则使用“min_width”。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/min-width>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/min-width>
     pub min_width: Val,
 
-    /// The minimum height of the node. `min_height` is used if it is greater than `height` and/or `max_height`.
+    /// 节点的最小高度。如果“min_height”大于“height”和/或“max_height”，则使用“min_height”。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/min-height>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/min-height>
     pub min_height: Val,
 
-    /// The maximum width of the node. `max_width` is used if it is within the bounds defined by `min_width` and `width`.
+    /// 节点的最大宽度。如果“max_width”在“min_width”和“width”定义的范围内，则使用“max_width”。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/max-width>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/max-width>
     pub max_width: Val,
 
-    /// The maximum height of the node. `max_height` is used if it is within the bounds defined by `min_height` and `height`.
+    /// 节点的最大高度。如果“max_height”在“min_height”和“height”定义的范围内，则使用“max_height”。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/max-height>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/max-height>
     pub max_height: Val,
 
-    /// The aspect ratio of the node (defined as `width / height`)
+    /// 节点的宽高比（定义为“宽度/高度”）
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/aspect-ratio>
     pub aspect_ratio: Option<f32>,
 
-    /// Used to control how each individual item is aligned by default within the space they're given.
-    /// - For Flexbox containers, sets default cross axis alignment of the child items.
-    /// - For CSS Grid containers, controls block (vertical) axis alignment of children of this grid container within their grid areas.
+    ///用于控制每个单独的项在给定空间内的默认对齐方式。
+    ///-对于 Flexbox 容器，设置子项的默认横轴对齐方式。
+    ///-对于 CSS 网格容器，控制此网格容器的子项在其网格区域内的块（垂直）轴对齐。
     ///
-    /// This value is overridden if [`AlignSelf`] on the child node is set.
+    ///如果设置了子节点上的 [`AlignSelf`]，则该值将被覆盖。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/align-items>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items>
     pub align_items: AlignItems,
 
-    /// Used to control how each individual item is aligned by default within the space they're given.
-    /// - For Flexbox containers, this property has no effect. See `justify_content` for main axis alignment of flex items.
-    /// - For CSS Grid containers, sets default inline (horizontal) axis alignment of child items within their grid areas.
+    ///用于控制每个单独的项在给定空间内的默认对齐方式。
+    ///-对于 Flexbox 容器，此属性无效。有关 Flex 项目的主轴对齐方式，请参阅“justify_content”。
+    ///-对于 CSS 网格容器，设置其网格区域内子项的默认内联（水平）轴对齐方式。
     ///
-    /// This value is overridden if [`JustifySelf`] on the child node is set.
+    ///如果在子节点上设置了 [`JustifySelf`]，则该值将被覆盖。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-items>
     pub justify_items: JustifyItems,
 
-    /// Used to control how the specified item is aligned within the space it's given.
-    /// - For Flexbox items, controls cross axis alignment of the item.
-    /// - For CSS Grid items, controls block (vertical) axis alignment of a grid item within its grid area.
+    ///用于控制指定项在给定空间内的对齐方式。
+    ///-对于 Flexbox 项目，控制项目的横轴对齐方式。
+    ///-对于 CSS 网格项，控制网格项在其网格区域内的块（垂直）轴对齐。
     ///
-    /// If set to `Auto`, alignment is inherited from the value of [`AlignItems`] set on the parent node.
+    ///如果设置为“Auto”，则从父节点上设置的 [`AlignItems`] 值继承对齐方式。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/align-self>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-self>
     pub align_self: AlignSelf,
 
-    /// Used to control how the specified item is aligned within the space it's given.
-    /// - For Flexbox items, this property has no effect. See `justify_content` for main axis alignment of flex items.
-    /// - For CSS Grid items, controls inline (horizontal) axis alignment of a grid item within its grid area.
+    ///用于控制指定项在给定空间内的对齐方式。
+    ///-对于 Flexbox 项目，此属性无效。有关 Flex 项目的主轴对齐方式，请参阅“justify_content”。
+    ///-对于 CSS 网格项，控制网格项在其网格区域内的内联（水平）轴对齐。
     ///
-    /// If set to `Auto`, alignment is inherited from the value of [`JustifyItems`] set on the parent node.
+    ///如果设置为“Auto”，则从父节点上设置的 [`JustifyItems`] 值继承对齐方式。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-self>
     pub justify_self: JustifySelf,
 
-    /// Used to control how items are distributed.
-    /// - For Flexbox containers, controls alignment of lines if `flex_wrap` is set to [`FlexWrap::Wrap`] and there are multiple lines of items.
-    /// - For CSS Grid containers, controls alignment of grid rows.
+    ///用于控制项的分配方式。
+    ///-对于 Flexbox 容器，如果“flex_wrap”设置为 [“FlexWrap::Wrap”] 并且有多行项目，则控制行的对齐。
+    ///-对于 CSS 网格容器，控制网格行的对齐方式。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/align-content>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-content>
     pub align_content: AlignContent,
 
-    /// Used to control how items are distributed.
-    /// - For Flexbox containers, controls alignment of items in the main axis.
-    /// - For CSS Grid containers, controls alignment of grid columns.
+    ///用于控制项的分配方式。
+    ///-对于 Flexbox 容器，控制主轴中项目的对齐方式。
+    ///-对于 CSS 网格容器，控制网格列的对齐方式。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content>
     pub justify_content: JustifyContent,
 
-    /// The amount of space around a node outside its border.
+    ///节点周围在其边界之外的空间量。
     ///
-    /// If a percentage value is used, the percentage is calculated based on the width of the parent node.
+    ///如果使用百分比值，则根据父节点的宽度计算百分比。
     ///
-    /// # Example
+    /// # 例子
     /// ```
     /// # use bevy_ui::{Style, UiRect, Val};
     /// let style = Style {
@@ -310,9 +309,9 @@ pub struct Style {
     ///     ..Default::default()
     /// };
     /// ```
-    /// A node with this style and a parent with dimensions of 100px by 300px will have calculated margins of 10px on both left and right edges, and 15px on both top and bottom edges.
+    /// 具有此样式的节点和尺寸为 100px x 300px 的父节点将计算出左右边缘的边距为 10px，顶部和底部边缘的边距为 15px。
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/margin>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin>
     pub margin: UiRect,
 
     /// The amount of space between the edges of a node and its contents.
@@ -334,7 +333,7 @@ pub struct Style {
     /// ```
     /// A node with this style and a parent with dimensions of 300px by 100px will have calculated padding of 3px on the left, 6px on the right, 9px on the top and 12px on the bottom.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/padding>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding>
     pub padding: UiRect,
 
     /// The amount of space between the margins of a node and its padding.
@@ -343,87 +342,87 @@ pub struct Style {
     ///
     /// The size of the node will be expanded if there are constraints that prevent the layout algorithm from placing the border within the existing node boundary.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/border-width>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width>
     pub border: UiRect,
 
     /// Whether a Flexbox container should be a row or a column. This property has no effect on Grid nodes.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-direction>
     pub flex_direction: FlexDirection,
 
     /// Whether a Flexbox container should wrap its contents onto multiple lines if they overflow. This property has no effect on Grid nodes.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-wrap>
     pub flex_wrap: FlexWrap,
 
     /// Defines how much a flexbox item should grow if there's space available. Defaults to 0 (don't grow at all).
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow>
     pub flex_grow: f32,
 
     /// Defines how much a flexbox item should shrink if there's not enough space available. Defaults to 1.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink>
     pub flex_shrink: f32,
 
     /// The initial length of a flexbox in the main axis, before flex growing/shrinking properties are applied.
     ///
     /// `flex_basis` overrides `size` on the main axis if both are set, but it obeys the bounds defined by `min_size` and `max_size`.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis>
     pub flex_basis: Val,
 
     /// The size of the gutters between items in a vertical flexbox layout or between rows in a grid layout.
     ///
     /// Note: Values of `Val::Auto` are not valid and are treated as zero.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/row-gap>
     pub row_gap: Val,
 
     /// The size of the gutters between items in a horizontal flexbox layout or between column in a grid layout.
     ///
     /// Note: Values of `Val::Auto` are not valid and are treated as zero.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/column-gap>
     pub column_gap: Val,
 
     /// Controls whether automatically placed grid items are placed row-wise or column-wise as well as whether the sparse or dense packing algorithm is used.
     /// Only affects Grid layouts.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-flow>
     pub grid_auto_flow: GridAutoFlow,
 
     /// Defines the number of rows a grid has and the sizes of those rows. If grid items are given explicit placements then more rows may
     /// be implicitly generated by items that are placed out of bounds. The sizes of those rows are controlled by `grid_auto_rows` property.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-rows>
     pub grid_template_rows: Vec<RepeatedGridTrack>,
 
     /// Defines the number of columns a grid has and the sizes of those columns. If grid items are given explicit placements then more columns may
     /// be implicitly generated by items that are placed out of bounds. The sizes of those columns are controlled by `grid_auto_columns` property.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-columns>
     pub grid_template_columns: Vec<RepeatedGridTrack>,
 
     /// Defines the size of implicitly created rows. Rows are created implicitly when grid items are given explicit placements that are out of bounds
     /// of the rows explicitly created using `grid_template_rows`.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-rows>
     pub grid_auto_rows: Vec<GridTrack>,
     /// Defines the size of implicitly created columns. Columns are created implicitly when grid items are given explicit placements that are out of bounds
     /// of the columns explicitly created using `grid_template_columns`.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-columns>
     pub grid_auto_columns: Vec<GridTrack>,
 
     /// The row in which a grid item starts and how many rows it spans.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-row>
     pub grid_row: GridPlacement,
 
     /// The column in which a grid item starts and how many columns it spans.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-column>
     pub grid_column: GridPlacement,
 }
 
@@ -480,7 +479,7 @@ impl Default for Style {
 /// - For Flexbox containers, sets default cross axis alignment of the child items.
 /// - For CSS Grid containers, controls block (vertical) axis alignment of children of this grid container within their grid areas.
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/align-items>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items>
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Default, PartialEq)]
 #[cfg_attr(
@@ -523,7 +522,7 @@ impl Default for AlignItems {
 /// - For Flexbox containers, this property has no effect. See `justify_content` for main axis alignment of flex items.
 /// - For CSS Grid containers, sets default inline (horizontal) axis alignment of child items within their grid areas.
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-items>
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Default, PartialEq)]
 #[cfg_attr(
@@ -560,7 +559,7 @@ impl Default for JustifyItems {
 /// - For Flexbox items, controls cross axis alignment of the item.
 /// - For CSS Grid items, controls block (vertical) axis alignment of a grid item within its grid area.
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/align-self>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-self>
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Default, PartialEq)]
 #[cfg_attr(
@@ -603,7 +602,7 @@ impl Default for AlignSelf {
 /// - For Flexbox items, this property has no effect. See `justify_content` for main axis alignment of flex items.
 /// - For CSS Grid items, controls inline (horizontal) axis alignment of a grid item within its grid area.
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-self>
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Default, PartialEq)]
 #[cfg_attr(
@@ -640,7 +639,7 @@ impl Default for JustifySelf {
 /// - For Flexbox containers, controls alignment of lines if `flex_wrap` is set to [`FlexWrap::Wrap`] and there are multiple lines of items.
 /// - For CSS Grid containers, controls alignment of grid rows.
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/align-content>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-content>
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Default, PartialEq)]
 #[cfg_attr(
@@ -687,7 +686,7 @@ impl Default for AlignContent {
 /// - For Flexbox containers, controls alignment of items in the main axis.
 /// - For CSS Grid containers, controls alignment of grid columns.
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content>
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Default, PartialEq)]
 #[cfg_attr(
@@ -974,7 +973,7 @@ impl Default for FlexWrap {
 ///
 /// Defaults to [`GridAutoFlow::Row`].
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-flow>
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Default, PartialEq)]
 #[cfg_attr(
@@ -1139,7 +1138,7 @@ impl GridTrack {
 
     /// Create a `fit-content()` grid track with fixed pixel limit.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content_function>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/fit-content_function>
     pub fn fit_content_px<T: From<Self>>(limit: f32) -> T {
         Self {
             min_sizing_function: MinTrackSizingFunction::Auto,
@@ -1150,7 +1149,7 @@ impl GridTrack {
 
     /// Create a `fit-content()` grid track with percentage limit.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content_function>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/fit-content_function>
     pub fn fit_content_percent<T: From<Self>>(limit: f32) -> T {
         Self {
             min_sizing_function: MinTrackSizingFunction::Auto,
@@ -1161,7 +1160,7 @@ impl GridTrack {
 
     /// Create a `minmax()` grid track.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/minmax>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/minmax>
     pub fn minmax<T: From<Self>>(min: MinTrackSizingFunction, max: MaxTrackSizingFunction) -> T {
         Self {
             min_sizing_function: min,
@@ -1186,18 +1185,18 @@ impl Default for GridTrack {
 )]
 /// How many times to repeat a repeated grid track
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/repeat>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/repeat>
 pub enum GridTrackRepetition {
     /// Repeat the track fixed number of times
     Count(u16),
     /// Repeat the track to fill available space
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/repeat#auto-fill>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/repeat#auto-fill>
     AutoFill,
     /// Repeat the track to fill available space but collapse any tracks that do not end up with
     /// an item placed in them.
     ///
-    /// <https://developer.mozilla.org/en-US/docs/Web/CSS/repeat#auto-fit>
+    /// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/repeat#auto-fit>
     AutoFit,
 }
 
@@ -1406,7 +1405,7 @@ impl From<RepeatedGridTrack> for Vec<RepeatedGridTrack> {
 /// Generally, at most two fields should be set. If all three fields are specified then `span` will be ignored. If `end` specifies an earlier
 /// grid line than `start` then `end` will be ignored and the item will have a span of 1.
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid>
 pub struct GridPlacement {
     /// The grid line at which the item should start.
     /// Lines are 1-indexed.
@@ -1852,7 +1851,7 @@ impl Default for ZIndex {
 /// }
 /// ```
 ///
-/// <https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius>
+/// <https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius>
 #[derive(Component, Copy, Clone, Debug, PartialEq, Reflect)]
 #[reflect(PartialEq, Default)]
 #[cfg_attr(
