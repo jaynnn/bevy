@@ -85,7 +85,7 @@ fn main(){
 
 ### 快速编译
 
-Bevy可以用默认配置在稳定版本Rust挺好地构建。然而对于非常快速的迭代编译，你需要通过[following the instructions here](https://bevyengine.org/learn/quick-start/getting-started/setup)启用“快速编译”设置。
+Bevy可以用默认配置在稳定版本Rust挺好地构建。然而对于非常快速的迭代编译，你需要通过[这里的介绍](https://bevyengine.org/learn/quick-start/getting-started/setup)启用“快速编译”设置。
 
 ## [Bevy的cargo特性][cargo_features]
 
