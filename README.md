@@ -41,36 +41,37 @@ Bevy还在开发的早期阶段。许多重要特性还缺失着，文档也很�
 
 ## 社区
 
-Before contributing or participating in discussions with the community, you should familiarize yourself with our [**Code of Conduct**](./CODE_OF_CONDUCT.md).
+在参与社区贡献或讨论之前，你应该自我熟悉一下我们的[**行为准则**](./CODE_OF_CONDUCT.md).
 
-* **[Discord](https://discord.gg/bevy):** Bevy's official discord server.
-* **[Reddit](https://reddit.com/r/bevy):** Bevy's official subreddit.
-* **[GitHub Discussions](https://github.com/bevyengine/bevy/discussions):** The best place for questions about Bevy, answered right here!
-* **[Bevy Assets](https://bevyengine.org/assets/):** A collection of awesome Bevy projects, tools, plugins and learning materials.
+* **[Discord](https://discord.gg/bevy):** Bevy的官方Discord。
+* **[Reddit](https://reddit.com/r/bevy):** Bevy的官方Reddit。
+* **[GitHub Discussions](https://github.com/bevyengine/bevy/discussions):** 关于Bevy的疑问的最佳询问地。
+* **[Bevy Assets](https://bevyengine.org/assets/):** 一系列很棒的Bevy项目、工具、插件和学习材料。
 
-### Contributing
+### 贡献
 
-If you'd like to help build Bevy, check out the **[Contributor's Guide](https://github.com/bevyengine/bevy/blob/main/CONTRIBUTING.md)**.
-For simple problems, feel free to [open an issue](https://github.com/bevyengine/bevy/issues) or
-[PR](https://github.com/bevyengine/bevy/pulls) and tackle it yourself!
+如果你想要对Bevy做出贡献，参阅 **[贡献者指南](https://github.com/bevyengine/bevy/blob/main/CONTRIBUTING.md)**.
+对于简单的问题，随意 [开个issue](https://github.com/bevyengine/bevy/issues) 或者
+[PR](https://github.com/bevyengine/bevy/pulls) 您自己解决!
 
+对于更加复杂的架构决策和实验性质的疯狂科学想法，请开个[RFC](https://github.com/bevyengine/rfcs)（讨论请求），然后我们可以一起进行高效的头脑风暴。
 For more complex architecture decisions and experimental mad science, please open an [RFC](https://github.com/bevyengine/rfcs) (Request For Comments) so we can brainstorm together effectively!
 
-## Getting Started
+## 开始
 
-We recommend checking out the [Quick Start Guide](https://bevyengine.org/learn/quick-start/introduction) for a brief introduction.
+我们推荐看下 [快速入门指南](https://bevyengine.org/learn/quick-start/introduction) 作为简要的介绍。
 
-Follow the [Setup guide](https://bevyengine.org/learn/quick-start/getting-started/setup) to ensure your development environment is set up correctly.
-Once set up, you can quickly try out the [examples](https://github.com/bevyengine/bevy/tree/latest/examples) by cloning this repo and running the following commands:
+沿着 [配置指南](https://bevyengine.org/learn/quick-start/getting-started/setup) 保证你的开发环境得到正确配置。
+配置完成后，你可以尝试下[示例](https://github.com/bevyengine/bevy/tree/latest/examples) 通过克隆本仓库并执行一下命令：
 
 ```sh
-# Switch to the correct version (latest release, default is main development branch)
+# 切换到正确的版本 (最新发布版，默认开发分支*main*)
 git checkout latest
-# Runs the "breakout" example
+# 运行 "breakout" 示例
 cargo run --example breakout
 ```
 
-To draw a window with standard functionality enabled, use:
+用以下代码启用标准功能绘制一个窗口：
 
 ```rust
 use bevy::prelude::*;
@@ -82,52 +83,51 @@ fn main(){
 }
 ```
 
-### Fast Compiles
+### 快速编译
 
-Bevy can be built just fine using default configuration on stable Rust. However for really fast iterative compiles, you should enable the "fast compiles" setup by [following the instructions here](https://bevyengine.org/learn/quick-start/getting-started/setup).
+Bevy可以用默认配置在稳定版本Rust挺好地构建。然而对于非常快速的迭代编译，你需要通过[following the instructions here](https://bevyengine.org/learn/quick-start/getting-started/setup)启用“快速编译”设置。
 
-## [Bevy Cargo Features][cargo_features]
+## [Bevy的cargo特性][cargo_features]
 
-This [list][cargo_features] outlines the different cargo features supported by Bevy. These allow you to customize the Bevy feature set for your use-case.
+这个 [列表][cargo_features] 概括了Bevy支持的不同cargo特性。它们允许你在你自己的使用场景中自定义Bevy特性集。
 
 [cargo_features]: docs/cargo_features.md
 
-## Thanks
+## 致谢
 
-Bevy is the result of the hard work of many people. A huge thanks to all Bevy contributors, the many open source projects that have come before us, the [Rust gamedev ecosystem](https://arewegameyet.rs/), and the many libraries we build on.
+Bevy是很多人努力工作的成果。非常非常感谢所有的Bevy贡献者、许多于我们之前的开源项目、[Rust 游戏开发生态](https://arewegameyet.rs/)，以及我们所依赖的许多库。
 
-A huge thanks to Bevy's [generous sponsors](https://bevyengine.org). Bevy will always be free and open source, but it isn't free to make. Please consider [sponsoring our work](https://bevyengine.org/donate/) if you like what we're building.
+非常非常感谢Bevy的[慷慨的赞助者]。Bevy将永远免费且开源，但制作它并非免费。如果你喜欢我们所构建的内容，请考虑[支持我们的工作](https://bevyengine.org/donate/)。
 
 <!-- This next line need to stay exactly as is. It is required for BrowserStack sponsorship. -->
 This project is tested with BrowserStack.
 
-## License
+## 许可证
 
-Bevy is free, open source and permissively licensed!
-Except where noted (below and/or in individual files), all code in this repository is dual-licensed under either:
+Bevy是免费、开源且宽松许可的！
+除非另有说明（在下面和/或在单个文件中），此存储库中的所有代码均根据以下任一方式获得双重许可：
 
 * MIT License ([LICENSE-MIT](LICENSE-MIT) or [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT))
 * Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0))
 
-at your option.
-This means you can select the license you prefer!
-This dual-licensing approach is the de-facto standard in the Rust ecosystem and there are [very good reasons](https://github.com/bevyengine/bevy/issues/2373) to include both.
+这意味着你可以选择你倾向的许可证！
+这种双重许可方法是 Rust 生态系统中事实上的标准，并且有[非常充分的理由](https://github.com/bevyengine/bevy/issues/2373) 包含这两种方法。
 
-Some of the engine's code carries additional copyright notices and license terms due to their external origins.
-These are generally BSD-like, but exact details vary by crate:
-If the README of a crate contains a 'License' header (or similar), the additional copyright notices and license terms applicable to that crate will be listed.
-The above licensing requirement still applies to contributions to those crates, and sections of those crates will carry those license terms.
-The [license](https://doc.rust-lang.org/cargo/reference/manifest.html#the-license-and-license-file-fields) field of each crate will also reflect this.
-For example, [`bevy_mikktspace`](./crates/bevy_mikktspace/README.md#license-agreement) has code under the Zlib license (as well as a copyright notice when choosing the MIT license).
+由于其外部来源，某些引擎的代码带有额外的版权声明和许可条款。
+这些通常与 BSD 类似，但具体细节因板条箱而异：
+如果包的自述文件包含“许可证”标题（或类似的），则将列出适用于该包的附加版权声明和许可条款。
+上述许可要求仍然适用于对这些 crate 的贡献，并且这些 crate 的各个部分将带有这些许可条款。
+每个板条箱的 [license](https://doc.rust-lang.org/cargo/reference/manifest.html#the-license-and-license-file-fields) 字段也会反映这一点。
+例如，[`bevy_mikktspace`](./crates/bevy_mikktspace/README.md#license-agreement) 具有 Zlib 许可证下的代码（以及选择 MIT 许可证时的版权声明）。
 
-The [assets](assets) included in this repository (for our [examples](./examples/README.md)) typically fall under different open licenses.
-These will not be included in your game (unless copied in by you), and they are not distributed in the published bevy crates.
-See [CREDITS.md](CREDITS.md) for the details of the licenses of those files.
+此存储库中包含的[资产]（资产）（对于我们的[示例](./examples/README.md)）通常属于不同的开放许可证。
+这些不会包含在您的游戏中（除非您复制），并且它们不会分布在已发布的 bevy 板条箱中。
+有关这些文件的许可证的详细信息，请参阅 [CREDITS.md](CREDITS.md)。
 
-### Your contributions
+### 你的贡献
 
-Unless you explicitly state otherwise,
-any contribution intentionally submitted for inclusion in the work by you,
-as defined in the Apache-2.0 license,
-shall be dual licensed as above,
-without any additional terms or conditions.
+除非您另有明确说明，
+您有意提交以包含在作品中的任何贡献，
+根据 Apache-2.0 许可证中的定义，
+应获得上述双重许可，
+没有任何附加条款或条件。
