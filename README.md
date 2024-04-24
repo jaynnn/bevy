@@ -7,39 +7,39 @@
 [![CI](https://github.com/bevyengine/bevy/workflows/CI/badge.svg)](https://github.com/bevyengine/bevy/actions)
 [![Discord](https://img.shields.io/discord/691052431525675048.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/bevy)
 
-## What is Bevy?
+## 本分支是Bevy的汉化版本，包括项目内的所有注释和文档，但不包含外链内容。
+## Bevy是什么?
 
-Bevy is a refreshingly simple data-driven game engine built in Rust. It is free and open-source forever!
+Bevy是一个用Rust构建的、全新的简单数据驱动的游戏引擎。永久免费且开源！
 
-## WARNING
+## 警告
 
-Bevy is still in the early stages of development. Important features are missing. Documentation is sparse. A new version of Bevy containing breaking changes to the API is released [approximately once every 3 months](https://bevyengine.org/news/bevy-0-6/#the-train-release-schedule). We provide [migration guides](https://bevyengine.org/learn/migration-guides/), but we can't guarantee migrations will always be easy. Use only if you are willing to work in this environment.
+Bevy还在开发的早期阶段。许多重要特性还缺失着，文档也很少。一个新的Bevy版本发布可能会带来对API破坏性的改变[发布约每三个月一次](https://bevyengine.org/news/bevy-0-6/#the-train-release-schedule)。我们会提供[迁移指引](https://bevyengine.org/learn/migration-guides/)，但我们无法保证每次都可以简单地迁移。仅在你愿意在此前提下工作使用它。
 
-**MSRV:** Bevy relies heavily on improvements in the Rust language and compiler.
-As a result, the Minimum Supported Rust Version (MSRV) is generally close to "the latest stable release" of Rust.
+**最小支持Rust版本:** Bevy严重依赖着Rust和编译器的演进。因此，Bevy的最小支持Rust版本一般接近于Rust的“最新的稳定发布版本”。
 
-## Design Goals
+## 设计目标
 
-* **Capable**: Offer a complete 2D and 3D feature set
-* **Simple**: Easy for newbies to pick up, but infinitely flexible for power users
-* **Data Focused**: Data-oriented architecture using the Entity Component System paradigm
-* **Modular**: Use only what you need. Replace what you don't like
-* **Fast**: App logic should run quickly, and when possible, in parallel
-* **Productive**: Changes should compile quickly ... waiting isn't fun
+* **能力**: 提供一个完整的2D和3D的特性集合
+* **简单性**: 新手易入门，老手可以拥有无限的灵活性
+* **以数据为重心**: 使用ECS模式的数据驱动结构
+* **模块化**: 使用你需要的，替代你不喜欢的
+* **快速**: 应用逻辑需要快速运行并尽可能并行化
+* **高效性**: 变动需要尽可能快，等待并无乐趣
 
-## About
+## 关于
 
-* **[Features](https://bevyengine.org):** A quick overview of Bevy's features.
-* **[News](https://bevyengine.org/news/)**: A development blog that covers our progress, plans and shiny new features.
+* **[特性](https://bevyengine.org):** Bevy特性的概述。
+* **[新闻](https://bevyengine.org/news/)**: 一个包含我们的进度、计划和闪亮的新特性的开发博客。
 
-## Docs
+## 文档
 
-* **[Quick Start Guide](https://bevyengine.org/learn/quick-start/introduction):** Bevy's official Quick Start Guide. The best place to start learning Bevy.
-* **[Bevy Rust API Docs](https://docs.rs/bevy):** Bevy's Rust API docs, which are automatically generated from the doc comments in this repo.
-* **[Official Examples](https://github.com/bevyengine/bevy/tree/latest/examples):** Bevy's dedicated, runnable examples, which are great for digging into specific concepts.
-* **[Community-Made Learning Resources](https://bevyengine.org/assets/#learning)**: More tutorials, documentation, and examples made by the Bevy community.
+* **[快速开始](https://bevyengine.org/learn/quick-start/introduction):** Bevy官方的快速入门指引。开始学习Bevy最佳的地方。
+* **[Bevy Rust API 文档](https://docs.rs/bevy):** Bevy的RustAPI文档，自动生成于本仓库的注释。
+* **[官方示例](https://github.com/bevyengine/bevy/tree/latest/examples):** Bevy专门的可运行示例，非常适合深究特定的概念。
+* **[社区制作的学习资源](https://bevyengine.org/assets/#learning)**: 更多Bevy社区制作的教程、文档和示例。
 
-## Community
+## 社区
 
 Before contributing or participating in discussions with the community, you should familiarize yourself with our [**Code of Conduct**](./CODE_OF_CONDUCT.md).
 
