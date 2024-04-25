@@ -265,7 +265,7 @@ where
 
     /// Clears the `pressed`, `just_pressed`, and `just_released` data for every input.
     ///
-    /// See also [`ButtonInput::clear`] for simulating elapsed time steps.
+    /// 另请参阅 [`ButtonInput::clear`] for simulating elapsed time steps.
     pub fn reset_all(&mut self) {
         self.pressed.clear();
         self.just_pressed.clear();
@@ -274,7 +274,7 @@ where
 
     /// Clears the `just pressed` and `just released` data for every input.
     ///
-    /// See also [`ButtonInput::reset_all`] for a full reset.
+    /// 另请参阅 [`ButtonInput::reset_all`] for a full reset.
     pub fn clear(&mut self) {
         self.just_pressed.clear();
         self.just_released.clear();

@@ -35,7 +35,7 @@ use bevy_reflect::{ReflectDeserialize, ReflectSerialize};
 /// Note that you can also control the visibility of a node using the [`Display`](crate::ui_node::Display) property,
 /// which fully collapses it during layout calculations.
 ///
-/// # See also
+/// # 另请参阅
 ///
 /// - [`ButtonBundle`](crate::node_bundles::ButtonBundle) which includes this component
 /// - [`RelativeCursorPosition`] to obtain the position of the cursor relative to current node

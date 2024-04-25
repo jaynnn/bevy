@@ -62,7 +62,7 @@ pub struct PlaybackSettings {
     pub paused: bool,
     /// Enables spatial audio for this source.
     ///
-    /// See also: [`SpatialListener`].
+    /// 另请参阅: [`SpatialListener`].
     ///
     /// Note: Bevy does not currently support HRTF or any other high-quality 3D sound rendering
     /// features. Spatial audio is implemented via simple left-right stereo panning.

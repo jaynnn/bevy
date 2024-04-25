@@ -6,7 +6,7 @@ use bevy_time::{Real, Time};
 
 /// Adds "frame time" diagnostic to an App, specifically "frame time", "fps" and "frame count"
 ///
-/// # See also
+/// # 另请参阅
 ///
 /// [`LogDiagnosticsPlugin`](crate::LogDiagnosticsPlugin) to output diagnostics to the console.
 #[derive(Default)]

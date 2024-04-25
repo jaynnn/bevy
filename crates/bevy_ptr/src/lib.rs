@@ -211,7 +211,7 @@ macro_rules! impl_ptr {
             /// As the pointer is type-erased, there is no size information available. The provided
             /// `count` parameter is in raw bytes.
             ///
-            /// *See also: [`ptr::offset`][ptr_offset]*
+            /// *另请参阅: [`ptr::offset`][ptr_offset]*
             ///
             /// # Safety
             /// - The offset cannot make the existing ptr null, or take it out of bounds for its allocation.
@@ -233,7 +233,7 @@ macro_rules! impl_ptr {
             /// As the pointer is type-erased, there is no size information available. The provided
             /// `count` parameter is in raw bytes.
             ///
-            /// *See also: [`ptr::add`][ptr_add]*
+            /// *另请参阅: [`ptr::add`][ptr_add]*
             ///
             /// # Safety
             /// - The offset cannot make the existing ptr null, or take it out of bounds for its allocation.

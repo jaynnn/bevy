@@ -9,7 +9,7 @@ use bevy_render::{extract_component::ExtractComponent, prelude::Camera};
 /// Bloom emulates an effect found in real cameras and the human eye,
 /// causing halos to appear around very bright parts of the scene.
 ///
-/// See also <https://en.wikipedia.org/wiki/Bloom_(shader_effect)>.
+/// 另请参阅 <https://en.wikipedia.org/wiki/Bloom_(shader_effect)>.
 ///
 /// # Usage Notes
 ///

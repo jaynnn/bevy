@@ -17,7 +17,7 @@ use thiserror::Error;
 
 /// Base component for a UI node, which also provides the computed size of the node.
 ///
-/// # See also
+/// # 另请参阅
 ///
 /// - [`node_bundles`](crate::node_bundles) for the list of built-in bundles that set up UI node
 /// - [`RelativeCursorPosition`](crate::RelativeCursorPosition)

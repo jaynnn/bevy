@@ -12,7 +12,7 @@ use bevy_ecs::system::Resource;
 ///
 /// NOT supported when using the `bevy/dynamic` feature even when using previously mentioned targets
 ///
-/// # See also
+/// # 另请参阅
 ///
 /// [`LogDiagnosticsPlugin`](crate::LogDiagnosticsPlugin) to output diagnostics to the console.
 #[derive(Default)]
@@ -34,7 +34,7 @@ impl SystemInformationDiagnosticsPlugin {
 /// A resource that stores diagnostic information about the system.
 /// This information can be useful for debugging and profiling purposes.
 ///
-/// # See also
+/// # 另请参阅
 ///
 /// [`SystemInformationDiagnosticsPlugin`] for more information.
 #[derive(Debug, Resource)]

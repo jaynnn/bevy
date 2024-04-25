@@ -428,7 +428,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(report_names_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// [`iter_mut`](Self::iter_mut) for mutable query items.
     #[inline]
@@ -466,7 +466,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(gravity_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// [`iter`](Self::iter) for read-only query items.
     #[inline]
@@ -497,7 +497,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// }
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`iter_combinations_mut`](Self::iter_combinations_mut) for mutable query item combinations.
     #[inline]
@@ -535,7 +535,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// }
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`iter_combinations`](Self::iter_combinations) for read-only query item combinations.
     #[inline]
@@ -582,7 +582,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`iter_many_mut`](Self::iter_many_mut) to get mutable query items.
     #[inline]
@@ -668,7 +668,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// This function makes it possible to violate Rust's aliasing guarantees.
     /// You must make sure this call does not result in multiple mutable references to the same component.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`iter`](Self::iter) and [`iter_mut`](Self::iter_mut) for the safe versions.
     #[inline]
@@ -692,7 +692,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// This allows aliased mutability.
     /// You must make sure this call does not result in multiple mutable references to the same component.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`iter_combinations`](Self::iter_combinations) and [`iter_combinations_mut`](Self::iter_combinations_mut) for the safe versions.
     #[inline]
@@ -719,7 +719,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// You must make sure this call does not result in multiple mutable references to the same component.
     /// Particular care must be taken when collecting the data (rather than iterating over it one item at a time) such as via [`Iterator::collect`].
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`iter_many_mut`](Self::iter_many_mut) to safely access the query items.
     pub unsafe fn iter_many_unsafe<EntityList: IntoIterator>(
@@ -839,7 +839,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(print_selected_character_name_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_mut`](Self::get_mut) to get a mutable query item.
     #[inline]
@@ -862,7 +862,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// In case of a nonexisting entity or mismatched component, a [`QueryEntityError`] is returned instead.
     /// The elements of the array do not need to be unique, unlike `get_many_mut`.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_many_mut`](Self::get_many_mut) to get mutable query items.
     /// - [`many`](Self::many) for the panicking version.
@@ -918,7 +918,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// }
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_many`](Self::get_many) for the non-panicking version.
     #[inline]
@@ -955,7 +955,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(poison_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get`](Self::get) to get a read-only query item.
     #[inline]
@@ -973,7 +973,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// The returned query items are in the same order as the input.
     /// In case of a nonexisting entity, duplicate entities or mismatched component, a [`QueryEntityError`] is returned instead.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_many`](Self::get_many) to get read-only query items.
     /// - [`many_mut`](Self::many_mut) for the panicking version.
@@ -1033,7 +1033,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// }
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_many_mut`](Self::get_many_mut) for the non panicking version.
     /// - [`many`](Self::many) to get read-only query items.
@@ -1056,7 +1056,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// This function makes it possible to violate Rust's aliasing guarantees.
     /// You must make sure this call does not result in multiple mutable references to the same component.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_mut`](Self::get_mut) for the safe version.
     #[inline]
@@ -1090,7 +1090,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(player_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_single`](Self::get_single) for the non-panicking version.
     /// - [`single_mut`](Self::single_mut) to get the mutable query item.
@@ -1126,7 +1126,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(player_scoring_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_single_mut`](Self::get_single_mut) to get the mutable query item.
     /// - [`single`](Self::single) for the panicking version.
@@ -1167,7 +1167,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(regenerate_player_health_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_single_mut`](Self::get_single_mut) for the non-panicking version.
     /// - [`single`](Self::single) to get the read-only query item.
@@ -1197,7 +1197,7 @@ impl<'w, 's, D: QueryData, F: QueryFilter> Query<'w, 's, D, F> {
     /// # bevy_ecs::system::assert_is_system(regenerate_player_health_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_single`](Self::get_single) to get the read-only query item.
     /// - [`single_mut`](Self::single_mut) for the panicking version.

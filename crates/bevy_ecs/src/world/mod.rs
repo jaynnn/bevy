@@ -283,7 +283,7 @@ impl World {
     /// assert_eq!(component_a_id, world.component_id::<ComponentA>().unwrap())
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// * [`Components::component_id()`]
     /// * [`Components::get_id()`]

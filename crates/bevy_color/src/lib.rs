@@ -56,7 +56,7 @@
 //! spaces. The space is more formally known as CIE 1931, where the `x` and `z` axes represent
 //! a form of chromaticity, while `y` defines an illuminance level.
 //!
-//! See also the [Wikipedia article on color spaces](https://en.wikipedia.org/wiki/Color_space).
+//! 另请参阅 the [Wikipedia article on color spaces](https://en.wikipedia.org/wiki/Color_space).
 //!
 #![doc = include_str!("../docs/conversion.md")]
 //! <div>

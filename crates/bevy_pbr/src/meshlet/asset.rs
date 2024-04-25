@@ -26,7 +26,7 @@ pub const MESHLET_MESH_ASSET_VERSION: u64 = 0;
 ///   which requires certain shader patterns that differ from the regular material shaders.
 /// * Limited control over [`bevy_render::render_resource::RenderPipelineDescriptor`] attributes.
 ///
-/// See also [`super::MaterialMeshletMeshBundle`] and [`super::MeshletPlugin`].
+/// 另请参阅 [`super::MaterialMeshletMeshBundle`] and [`super::MeshletPlugin`].
 #[derive(Asset, TypePath, Serialize, Deserialize, Clone)]
 pub struct MeshletMesh {
     /// The total amount of triangles summed across all LOD 0 meshlets in the mesh.

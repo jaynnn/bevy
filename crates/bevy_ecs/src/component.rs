@@ -532,7 +532,7 @@ impl Components {
     /// If a component of this type has already been initialized, this will return
     /// the ID of the pre-existing component.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// * [`Components::component_id()`]
     /// * [`Components::init_component_with_descriptor()`]
@@ -563,7 +563,7 @@ impl Components {
     /// If this method is called multiple times with identical descriptors, a distinct `ComponentId`
     /// will be created for each one.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// * [`Components::component_id()`]
     /// * [`Components::init_component()`]
@@ -662,7 +662,7 @@ impl Components {
     /// assert_eq!(component_a_id, world.components().component_id::<ComponentA>().unwrap())
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// * [`Components::get_id()`]
     /// * [`Components::resource_id()`]
@@ -700,7 +700,7 @@ impl Components {
     /// assert_eq!(resource_a_id, world.components().resource_id::<ResourceA>().unwrap())
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// * [`Components::component_id()`]
     /// * [`Components::get_resource_id()`]
@@ -713,7 +713,7 @@ impl Components {
     /// If a resource of this type has already been initialized, this will return
     /// the ID of the pre-existing resource.
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// * [`Components::resource_id()`]
     #[inline]

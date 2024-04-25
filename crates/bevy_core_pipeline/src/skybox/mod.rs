@@ -66,7 +66,7 @@ impl Plugin for SkyboxPlugin {
 /// Note that this component does not (currently) affect the scene's lighting.
 /// To do so, use `EnvironmentMapLight` alongside this component.
 ///
-/// See also <https://en.wikipedia.org/wiki/Skybox_(video_games)>.
+/// 另请参阅 <https://en.wikipedia.org/wiki/Skybox_(video_games)>.
 #[derive(Component, Clone)]
 pub struct Skybox {
     pub image: Handle<Image>,

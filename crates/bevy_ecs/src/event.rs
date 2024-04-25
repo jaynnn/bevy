@@ -448,7 +448,7 @@ impl<'w, 's, E: Event> EventReader<'w, 's, E> {
     }
 
     /// Returns a parallel iterator over the events this [`EventReader`] has not seen yet.
-    /// See also [`for_each`](EventParIter::for_each).
+    /// 另请参阅 [`for_each`](EventParIter::for_each).
     ///
     /// # Example
     /// ```

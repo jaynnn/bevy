@@ -5,7 +5,7 @@ use crate::{Diagnostic, DiagnosticPath, Diagnostics, RegisterDiagnostic};
 
 /// Adds "entity count" diagnostic to an App.
 ///
-/// # See also
+/// # 另请参阅
 ///
 /// [`LogDiagnosticsPlugin`](crate::LogDiagnosticsPlugin) to output diagnostics to the console.
 #[derive(Default)]

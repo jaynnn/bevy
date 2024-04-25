@@ -526,7 +526,7 @@ impl<'a> TryFrom<&'a mut FilteredEntityMut<'_>> for EntityMut<'a> {
 /// Since this type provides mutable access to the entire world, only one
 /// [`EntityWorldMut`] can exist at a time for a given world.
 ///
-/// See also [`EntityMut`], which allows disjoint mutable access to multiple
+/// 另请参阅 [`EntityMut`], which allows disjoint mutable access to multiple
 /// entities at once.  Unlike `EntityMut`, this type allows adding and
 /// removing components, and despawning the entity.
 pub struct EntityWorldMut<'w> {

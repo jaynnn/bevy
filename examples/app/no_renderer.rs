@@ -2,7 +2,7 @@
 //! window, but without an actual renderer.
 //! This can be very useful for integration tests or CI.
 //!
-//! See also the `headless` example which does not display a window.
+//! 另请参阅 the `headless` example which does not display a window.
 
 use bevy::{
     prelude::*,

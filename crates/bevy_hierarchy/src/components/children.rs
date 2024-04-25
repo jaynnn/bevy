@@ -67,7 +67,7 @@ impl Children {
     ///
     /// For the unstable version, see [`sort_unstable_by`](Children::sort_unstable_by).
     ///
-    /// See also [`sort_by_key`](Children::sort_by_key), [`sort_by_cached_key`](Children::sort_by_cached_key).
+    /// 另请参阅 [`sort_by_key`](Children::sort_by_key), [`sort_by_cached_key`](Children::sort_by_cached_key).
     #[inline]
     pub fn sort_by<F>(&mut self, compare: F)
     where
@@ -83,7 +83,7 @@ impl Children {
     ///
     /// For the unstable version, see [`sort_unstable_by_key`](Children::sort_unstable_by_key).
     ///
-    /// See also [`sort_by`](Children::sort_by), [`sort_by_cached_key`](Children::sort_by_cached_key).
+    /// 另请参阅 [`sort_by`](Children::sort_by), [`sort_by_cached_key`](Children::sort_by_cached_key).
     #[inline]
     pub fn sort_by_key<K, F>(&mut self, compare: F)
     where
@@ -99,7 +99,7 @@ impl Children {
     ///
     /// For the underlying implementation, see [`slice::sort_by_cached_key`].
     ///
-    /// See also [`sort_by`](Children::sort_by), [`sort_by_key`](Children::sort_by_key).
+    /// 另请参阅 [`sort_by`](Children::sort_by), [`sort_by_key`](Children::sort_by_key).
     #[inline]
     pub fn sort_by_cached_key<K, F>(&mut self, compare: F)
     where
@@ -116,7 +116,7 @@ impl Children {
     ///
     /// For the stable version, see [`sort_by`](Children::sort_by).
     ///
-    /// See also [`sort_unstable_by_key`](Children::sort_unstable_by_key).
+    /// 另请参阅 [`sort_unstable_by_key`](Children::sort_unstable_by_key).
     #[inline]
     pub fn sort_unstable_by<F>(&mut self, compare: F)
     where
@@ -132,7 +132,7 @@ impl Children {
     ///
     /// For the stable version, see [`sort_by_key`](Children::sort_by_key).
     ///
-    /// See also [`sort_unstable_by`](Children::sort_unstable_by).
+    /// 另请参阅 [`sort_unstable_by`](Children::sort_unstable_by).
     #[inline]
     pub fn sort_unstable_by_key<K, F>(&mut self, compare: F)
     where

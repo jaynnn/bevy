@@ -836,7 +836,7 @@ impl AssetServer {
     /// or is still "alive".
     /// Returns the first ID in the event of multiple assets being registered against a single path.
     ///
-    /// # See also
+    /// # 另请参阅
     /// [`get_path_ids`][Self::get_path_ids] for all handles.
     pub fn get_path_id<'a>(&self, path: impl Into<AssetPath<'a>>) -> Option<UntypedAssetId> {
         let infos = self.data.infos.read();
@@ -858,7 +858,7 @@ impl AssetServer {
     /// or is still "alive".
     /// Returns the first handle in the event of multiple assets being registered against a single path.
     ///
-    /// # See also
+    /// # 另请参阅
     /// [`get_handles_untyped`][Self::get_handles_untyped] for all handles.
     pub fn get_handle_untyped<'a>(&self, path: impl Into<AssetPath<'a>>) -> Option<UntypedHandle> {
         let infos = self.data.infos.read();

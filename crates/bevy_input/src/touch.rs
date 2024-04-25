@@ -346,7 +346,7 @@ impl Touches {
 
     /// Clears `just_pressed`, `just_released`, and `just_canceled` data for every touch input.
     ///
-    /// See also [`Touches::reset_all`] for a full reset.
+    /// 另请参阅 [`Touches::reset_all`] for a full reset.
     pub fn clear(&mut self) {
         self.just_pressed.clear();
         self.just_released.clear();
@@ -355,7 +355,7 @@ impl Touches {
 
     /// Clears `pressed`, `just_pressed`, `just_released`, and `just_canceled` data for every touch input.
     ///
-    /// See also [`Touches::clear`] for clearing only touches that have just been pressed, released or canceled.
+    /// 另请参阅 [`Touches::clear`] for clearing only touches that have just been pressed, released or canceled.
     pub fn reset_all(&mut self) {
         self.pressed.clear();
         self.just_pressed.clear();

@@ -154,7 +154,7 @@ impl<'w, 's> Commands<'w, 's> {
     /// # bevy_ecs::system::assert_is_system(example_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`spawn`](Self::spawn) to spawn an entity with a bundle.
     /// - [`spawn_batch`](Self::spawn_batch) to spawn entities with a bundle each.
@@ -236,7 +236,7 @@ impl<'w, 's> Commands<'w, 's> {
     /// # bevy_ecs::system::assert_is_system(example_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`spawn_empty`](Self::spawn_empty) to spawn an entity without any components.
     /// - [`spawn_batch`](Self::spawn_batch) to spawn entities with a bundle each.
@@ -277,7 +277,7 @@ impl<'w, 's> Commands<'w, 's> {
     /// # bevy_ecs::system::assert_is_system(example_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`get_entity`](Self::get_entity) for the fallible version.
     #[inline]
@@ -326,7 +326,7 @@ impl<'w, 's> Commands<'w, 's> {
     /// # bevy_ecs::system::assert_is_system(example_system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`entity`](Self::entity) for the panicking version.
     #[inline]
@@ -372,7 +372,7 @@ impl<'w, 's> Commands<'w, 's> {
     /// # bevy_ecs::system::assert_is_system(system);
     /// ```
     ///
-    /// # See also
+    /// # 另请参阅
     ///
     /// - [`spawn`](Self::spawn) to spawn an entity with a bundle.
     /// - [`spawn_empty`](Self::spawn_empty) to spawn an entity without any components.

@@ -176,7 +176,7 @@ pub struct IrradianceVolume {
     /// After applying this multiplier, the resulting values should
     /// be in units of [cd/m^2](https://en.wikipedia.org/wiki/Candela_per_square_metre).
     ///
-    /// See also <https://google.github.io/filament/Filament.html#lighting/imagebasedlights/iblunit>.
+    /// 另请参阅 <https://google.github.io/filament/Filament.html#lighting/imagebasedlights/iblunit>.
     pub intensity: f32,
 }
 

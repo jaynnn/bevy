@@ -2,13 +2,13 @@ use crate::Stopwatch;
 use bevy_reflect::prelude::*;
 use bevy_utils::Duration;
 
-/// Tracks elapsed time. Enters the finished state once `duration` is reached.
+///跟踪经过的时间。一旦达到“duration”，就进入完成状态。
 ///
-/// Non repeating timers will stop tracking and stay in the finished state until reset.
-/// Repeating timers will only be in the finished state on each tick `duration` is reached or
-/// exceeded, and can still be reset at any given point.
+///非重复计时器将停止跟踪并保持完成状态直到重置。
+///重复计时器仅在达到或者超过每个“duration”时才处于完成状态，
+///并且仍然可以在任何给定的时间点重置。
 ///
-/// Paused timers will not have elapsed time increased.
+///暂停的计时器不会增加经过的时间。
 #[derive(Clone, Debug, Default, PartialEq, Eq, Reflect)]
 #[cfg_attr(feature = "serialize", derive(serde::Deserialize, serde::Serialize))]
 #[reflect(Default)]
@@ -21,9 +21,9 @@ pub struct Timer {
 }
 
 impl Timer {
-    /// Creates a new timer with a given duration.
+    ///创建一个具有给定持续时间的新计时器。
     ///
-    /// See also [`Timer::from_seconds`](Timer::from_seconds).
+    ///另请参阅[`Timer::from_seconds`](Timer::from_seconds)
     pub fn new(duration: Duration, mode: TimerMode) -> Self {
         Self {
             duration,
@@ -32,9 +32,9 @@ impl Timer {
         }
     }
 
-    /// Creates a new timer with a given duration in seconds.
+    /// 创建一个具有给定持续时间（以秒为单位）的新计时器。
     ///
-    /// # Example
+    /// # 例子
     /// ```
     /// # use bevy_time::*;
     /// let mut timer = Timer::from_seconds(1.0, TimerMode::Once);
@@ -47,11 +47,11 @@ impl Timer {
         }
     }
 
-    /// Returns `true` if the timer has reached its duration.
+    /// 如果计时器已达到其持续时间，则返回“true”。
+    /// 
+    /// 对于重复计时器，此方法的行为与 [`Timer::just_finished`] 相同。
     ///
-    /// For repeating timers, this method behaves identically to [`Timer::just_finished`].
-    ///
-    /// # Examples
+    /// # 例子
     /// ```
     /// # use bevy_time::*;
     /// use std::time::Duration;
@@ -75,7 +75,7 @@ impl Timer {
         self.finished
     }
 
-    /// Returns `true` only on the tick the timer reached its duration.
+    /// 仅在计时器达到其持续时间时返回“true”。
     ///
     /// # Examples
     /// ```
@@ -92,10 +92,10 @@ impl Timer {
         self.times_finished_this_tick > 0
     }
 
-    /// Returns the time elapsed on the timer. Guaranteed to be between 0.0 and `duration`.
-    /// Will only equal `duration` when the timer is finished and non repeating.
+    ///返回计时器所经过的时间。保证在 0.0 和 `duration` 之间。
+    ///仅当计时器完成且不重复时才等于“持续时间”。
     ///
-    /// See also [`Stopwatch::elapsed`](Stopwatch::elapsed).
+    /// 另请参阅 [`Stopwatch::elapsed`](Stopwatch::elapsed).
     ///
     /// # Examples
     /// ```
@@ -111,7 +111,7 @@ impl Timer {
     }
 
     /// Returns the time elapsed on the timer as an `f32`.
-    /// See also [`Timer::elapsed`](Timer::elapsed).
+    /// 另请参阅 [`Timer::elapsed`](Timer::elapsed).
     #[inline]
     pub fn elapsed_secs(&self) -> f32 {
         self.stopwatch.elapsed_secs()
@@ -119,7 +119,7 @@ impl Timer {
 
     /// Sets the elapsed time of the timer without any other considerations.
     ///
-    /// See also [`Stopwatch::set`](Stopwatch::set).
+    /// 另请参阅 [`Stopwatch::set`](Stopwatch::set).
     ///
     /// #
     /// ```
@@ -202,7 +202,7 @@ impl Timer {
     /// Repeating timer will wrap around.
     /// Will not affect paused timers.
     ///
-    /// See also [`Stopwatch::tick`](Stopwatch::tick).
+    /// 另请参阅 [`Stopwatch::tick`](Stopwatch::tick).
     ///
     /// # Examples
     /// ```
@@ -258,7 +258,7 @@ impl Timer {
 
     /// Pauses the Timer. Disables the ticking of the timer.
     ///
-    /// See also [`Stopwatch::pause`](Stopwatch::pause).
+    /// 另请参阅 [`Stopwatch::pause`](Stopwatch::pause).
     ///
     /// # Examples
     /// ```
@@ -276,7 +276,7 @@ impl Timer {
 
     /// Unpauses the Timer. Resumes the ticking of the timer.
     ///
-    /// See also [`Stopwatch::unpause()`](Stopwatch::unpause).
+    /// 另请参阅 [`Stopwatch::unpause()`](Stopwatch::unpause).
     ///
     /// # Examples
     /// ```
@@ -296,7 +296,7 @@ impl Timer {
 
     /// Returns `true` if the timer is paused.
     ///
-    /// See also [`Stopwatch::paused`](Stopwatch::paused).
+    /// 另请参阅 [`Stopwatch::paused`](Stopwatch::paused).
     ///
     /// # Examples
     /// ```
@@ -315,7 +315,7 @@ impl Timer {
 
     /// Resets the timer. The reset doesn't affect the `paused` state of the timer.
     ///
-    /// See also [`Stopwatch::reset`](Stopwatch::reset).
+    /// 另请参阅 [`Stopwatch::reset`](Stopwatch::reset).
     ///
     /// Examples
     /// ```
