@@ -29,7 +29,7 @@ pub trait ParallelSlice<T: Sync>: AsRef<[T]> {
     /// # assert_eq!(flattened, (2..10002).collect::<Vec<u32>>());
     /// ```
     ///
-    /// # See Also
+    /// # 另请参阅
     ///
     /// - [`ParallelSliceMut::par_chunk_map_mut`] for mapping mutable slices.
     /// - [`ParallelSlice::par_splat_map`] for mapping when a specific chunk size is unknown.
@@ -76,7 +76,7 @@ pub trait ParallelSlice<T: Sync>: AsRef<[T]> {
     /// # assert_eq!(flattened, (2..10002).collect::<Vec<u32>>());
     /// ```
     ///
-    /// # See Also
+    /// # 另请参阅
     ///
     /// [`ParallelSliceMut::par_splat_map_mut`] for mapping mutable slices.
     /// [`ParallelSlice::par_chunk_map`] for mapping when a specific chunk size is desirable.
@@ -132,7 +132,7 @@ pub trait ParallelSliceMut<T: Send>: AsMut<[T]> {
     /// # assert_eq!(flattened, (3..10003).collect::<Vec<u32>>());
     /// ```
     ///
-    /// # See Also
+    /// # 另请参阅
     ///
     /// [`ParallelSlice::par_chunk_map`] for mapping immutable slices.
     /// [`ParallelSliceMut::par_splat_map_mut`] for mapping when a specific chunk size is unknown.
@@ -182,7 +182,7 @@ pub trait ParallelSliceMut<T: Send>: AsMut<[T]> {
     /// # assert_eq!(flattened, (3..10003).collect::<Vec<u32>>());
     /// ```
     ///
-    /// # See Also
+    /// # 另请参阅
     ///
     /// [`ParallelSlice::par_splat_map`] for mapping immutable slices.
     /// [`ParallelSliceMut::par_chunk_map_mut`] for mapping when a specific chunk size is desirable.

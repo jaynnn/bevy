@@ -16,10 +16,10 @@ struct Player;
 #[derive(Resource)]
 struct PlayerCount(usize);
 
-/// The [`SystemParam`] struct can contain any types that can also be included in a
-/// system function signature.
+///[`SystemParam`] 结构可以包含也可以包含在
+///系统函数签名。
 ///
-/// In this example, it includes a query and a mutable resource.
+///在此示例中，它包括查询和可变资源。
 #[derive(SystemParam)]
 struct PlayerCounter<'w, 's> {
     players: Query<'w, 's, &'static Player>,

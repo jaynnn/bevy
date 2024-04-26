@@ -1,9 +1,9 @@
 use bevy_reflect::{prelude::*, Reflect};
 use bevy_utils::Duration;
 
-/// A Stopwatch is a struct that track elapsed time when started.
+/// 秒表是一个在启动时跟踪经过时间的结构。
 ///
-/// # Examples
+/// # 例子
 ///
 /// ```
 /// # use bevy_time::*;
@@ -31,9 +31,9 @@ pub struct Stopwatch {
 }
 
 impl Stopwatch {
-    /// Create a new unpaused `Stopwatch` with no elapsed time.
+    /// 创建一个新的未暂停的“秒表”，没有经过时间。
     ///
-    /// # Examples
+    /// # 例子
     /// ```
     /// # use bevy_time::*;
     /// let stopwatch = Stopwatch::new();
@@ -44,10 +44,9 @@ impl Stopwatch {
         Default::default()
     }
 
-    /// Returns the elapsed time since the last [`reset`](Stopwatch::reset)
-    /// of the stopwatch.
+    /// 返回秒表自上次 [`reset`](Stopwatch::reset) 以来经过的时间
     ///
-    /// # Examples
+    /// # 例子
     /// ```
     /// # use bevy_time::*;
     /// use std::time::Duration;
@@ -56,7 +55,7 @@ impl Stopwatch {
     /// assert_eq!(stopwatch.elapsed(), Duration::from_secs(1));
     /// ```
     ///
-    /// # See Also
+    /// # 另请参阅
     ///
     /// [`elapsed_secs`](Stopwatch::elapsed_secs) - if an `f32` value is desirable instead.
     /// [`elapsed_secs_f64`](Stopwatch::elapsed_secs_f64) - if an `f64` is desirable instead.
@@ -77,7 +76,7 @@ impl Stopwatch {
     /// assert_eq!(stopwatch.elapsed_secs(), 1.0);
     /// ```
     ///
-    /// # See Also
+    /// # 另请参阅
     ///
     /// [`elapsed`](Stopwatch::elapsed) - if a `Duration` is desirable instead.
     /// [`elapsed_secs_f64`](Stopwatch::elapsed_secs_f64) - if an `f64` is desirable instead.
@@ -89,7 +88,7 @@ impl Stopwatch {
     /// Returns the elapsed time since the last [`reset`](Stopwatch::reset)
     /// of the stopwatch, in seconds, as f64.
     ///
-    /// # See Also
+    /// # 另请参阅
     ///
     /// [`elapsed`](Stopwatch::elapsed) - if a `Duration` is desirable instead.
     /// [`elapsed_secs`](Stopwatch::elapsed_secs) - if an `f32` is desirable instead.
