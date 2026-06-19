@@ -183,8 +183,10 @@ impl DeviceErrorHandler {
 ///
 /// We need both the main and render world to properly handle errors, so we wedge ourselves into [extract](bevy_app::SubApp::set_extract).
 pub(crate) fn update_state(main_world: &mut World, render_world: &mut World) {
-    if let Some(error) = render_world.resource::<DeviceErrorHandler>().poll() {
-        render_world.insert_resource(RenderState::Errored(error));
+    if let Some(handler) = render_world.get_resource::<DeviceErrorHandler>() {
+        if let Some(error) = handler.poll() {
+            render_world.insert_resource(RenderState::Errored(error));
+        }
     };
 
     // Remove the render state so we can provide both worlds to the `RenderErrorHandler`.
